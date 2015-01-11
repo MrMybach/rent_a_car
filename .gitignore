@@ -14,5 +14,11 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+<<<<<<< Updated upstream
 rent_a_car.sublime-project
+=======
+
+*.sublime-project
+
+>>>>>>> Stashed changes
 rent_a_car.sublime-workspace
