@@ -40,7 +40,9 @@ class CarsController < ApplicationController
   end
 
   def destroy
-    @car = Car.find(params[:id])
+    Car.find(params[:id]).destroy
+    flash[:notice] = "Samochód został usunięty"
+    redirect_to cars_path
   end
 
   private

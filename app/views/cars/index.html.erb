@@ -21,7 +21,13 @@
 				<td><%= car.fuel_type %></td>
 				<td><%= car.num_of_seats %></td>
 				<td><%= number_to_currency(car.price_per_day, unit: 'PLN') %></td>
-				<td>Usuń | Wynajmij | <%= link_to 'Edycja', edit_car_path(car) %></td>
+				<td>
+					<div class="btn-group btn-group-xs" role="group"> 
+						<%= link_to 'Usuń', car_path(car), method: :delete, data: {confirm: "Jesteś pewny?!"}, class: "btn btn-danger" %>
+						<%= link_to 'Edytuj', edit_car_path(car), class: "btn btn-warning" %>
+						<%= link_to 'Wynajmij', car_path(car), class: "btn btn-info" %>
+					</div>
+				</td>
 			</tr>
 		<% end %>
 	</table>
