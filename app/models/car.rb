@@ -1,5 +1,7 @@
 class Car < ActiveRecord::Base
-  
+  has_many :rents
+  has_many :clients, through: :rents
+
   validates :car_brand, presence: true,
                         length: { in: 3..30 }
   validates :car_model, presence: true,
