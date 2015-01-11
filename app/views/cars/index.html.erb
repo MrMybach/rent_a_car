@@ -19,8 +19,8 @@
 				<td><%= car.car_brand %></td>
 				<td><%= car.car_model %></td>
 				<td><%= car.fuel_type %></td>
-				<td><%= car.number_of_seats %></td>
-				<td><%= car.price_per_day %></td>
+				<td><%= car.num_of_seats %></td>
+				<td><%= number_to_currency(car.price_per_day, unit: 'PLN') %></td>
 				<td>Edycja | Usuń | Wynajmij</td>
 			</tr>
 		<% end %>
