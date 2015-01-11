@@ -37,6 +37,7 @@ class CarsController < ApplicationController
 
   def show 
     @car = Car.find(params[:id])
+    @rent = Rent.new(car_id: @car.id)
   end
 
   def destroy

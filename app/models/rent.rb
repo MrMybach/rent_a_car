@@ -1,4 +1,4 @@
 class Rent < ActiveRecord::Base
-  belong_to :client
-  belong_to :car
+  belongs_to :client
+  belongs_to :car
 end
