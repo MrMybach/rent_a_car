@@ -1,0 +1,12 @@
+<h4>Dodaj nowego klienta</h4>
+<br>
+<form>
+<%= debug(@client)%>
+<%= simple_form_for @client, method: :post do |form| %>
+	<%= form.input :first_name %>
+	<%= form.input :last_name %>
+	<%= form.input :email %>
+	<%= form.input :telephone %>
+	<%= form.submit %>
+<% end %>
+</form>

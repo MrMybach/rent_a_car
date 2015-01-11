@@ -31,8 +31,8 @@ class ClientsController < ApplicationController
     @client = Client.find(params[:id])
       if @client.update_attributes(client_params)
         # redirect_to(:action => 'show', :id => @client.id) 
-        flash[:notice] = "Client updated."
-        redirect_to clients_path
+        # flash[:notice] = "Client updated."
+          redirect_to clients_path
       else
         render :edit
       end
@@ -46,6 +46,6 @@ class ClientsController < ApplicationController
 
   private
   def client_params
-    params.require(:client).permit(:first_name, :last_name, :email, :telephone)
+    params[:client].permit(:first_name, :last_name, :email, :telephone)
   end
 end
