@@ -1,10 +1,15 @@
-<h1>Dodawanie nowego samochodu</h1>
-
-<%= simple_form_for @car do |f| %>
-  <%= f.input :car_brand, placeholder: 'Marka samochodu' %>
-  <%= f.input :car_model, placeholder: 'Model samochodu' %>
-  <%= f.input :fuel_type, placeholder: 'Rodzaj paliwa' %>
-  <%= f.input :num_of_seats, placeholder: 'Liczba miejsc' %>
-  <%= f.input :price_per_day, placeholder: 'Cena za dzień' %>
-  <%= f.button :submit, 'Zapisz' %>
-<% end %>
+<div class="row">
+	<h1>Dodawanie nowego samochodu</h1>
+</div>
+<div class="row">
+	<section class="form">
+		<%= simple_form_for @car do |f| %>
+		  <div class="form-group"><%= f.input :car_brand, placeholder: 'Marka samochodu' %></div>
+		  <div class="form-group"><%= f.input :car_model, placeholder: 'Model samochodu' %></div>
+		  <div class="form-group"><%= f.input :fuel_type, placeholder: 'Rodzaj paliwa' %></div>
+		  <div class="form-group"><%= f.input :num_of_seats, placeholder: 'Liczba miejsc' %></div>
+		  <div class="form-group"><%= f.input :price_per_day, placeholder: 'Cena za dzień' %></div>
+		  <div class="form-group"><%= f.button :submit, 'Zapisz' %></div>
+		<% end %>
+	</section>
+</div>
