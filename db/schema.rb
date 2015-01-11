@@ -18,6 +18,16 @@ ActiveRecord::Schema.define(version: 20150111112308) do
     t.string   "last_name"
     t.string   "email"
     t.string   "telephone"
+
+ActiveRecord::Schema.define(version: 20150111112346) do
+
+  create_table "cars", force: true do |t|
+    t.string   "car_brand"
+    t.string   "car_model"
+    t.string   "fuel_type"
+    t.integer  "num_of_seats"
+    t.integer  "price_per_day"
+
     t.datetime "created_at"
     t.datetime "updated_at"
   end

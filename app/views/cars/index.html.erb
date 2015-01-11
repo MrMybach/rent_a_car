@@ -1,0 +1,28 @@
+<div class="row">
+	<h1>Lista wszystkich samochodów</h1>
+</div>
+<div class="row">
+	<%= link_to "Dodaj samochód", new_car_path %>
+</div>
+<div class="row">
+	<table class="table table-striped">
+		<tr>
+			<th>Marka</th>
+			<th>Model</th>
+			<th>Rodzaj paliwa</th>
+			<th>Liczba miejsc</th>
+			<th>Cena za dzień</th>
+			<th>Akcje</th>
+		</tr>
+		<% @cars.each do |car| %>
+			<tr>
+				<td><%= car.car_brand %></td>
+				<td><%= car.car_model %></td>
+				<td><%= car.fuel_type %></td>
+				<td><%= car.number_of_seats %></td>
+				<td><%= car.price_per_day %></td>
+				<td>Edycja | Usuń | Wynajmij</td>
+			</tr>
+		<% end %>
+	</table>
+</div>
