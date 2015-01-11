@@ -9,7 +9,7 @@ class CarsController < ApplicationController
   end
 
   def create
-    @car = Car.create(car_params)
+    @car = Car.new(car_params)
 
     if @car.save
       redirect_to root_path
@@ -18,6 +18,29 @@ class CarsController < ApplicationController
       flash[:warning] = "Coś poszło nie tak"
       render :new
     end
+  end
+
+  def edit
+    @car = Car.find(params[:id])
+  end
+
+  def update
+    @car = Car.find(params[:id])
+    if @car.update_attributes(car_params)
+      flash[:success] = "Edycja zakończona powodzeniem."
+      redirect_to car_path(@car)
+    else
+      flash.now[:error] = "Coś poszło nie tak. Spróbuj ponownie."
+      render :edit
+    end
+  end
+
+  def show 
+    @car = Car.find(params[:id])
+  end
+
+  def destroy
+    @car = Car.find(params[:id])
   end
 
   private

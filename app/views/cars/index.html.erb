@@ -21,7 +21,7 @@
 				<td><%= car.fuel_type %></td>
 				<td><%= car.num_of_seats %></td>
 				<td><%= number_to_currency(car.price_per_day, unit: 'PLN') %></td>
-				<td>Edycja | Usuń | Wynajmij</td>
+				<td>Usuń | Wynajmij | <%= link_to 'Edycja', edit_car_path(car) %></td>
 			</tr>
 		<% end %>
 	</table>
