@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150111144209) do
+ActiveRecord::Schema.define(version: 20150111150435) do
 
   create_table "cars", force: true do |t|
     t.string   "car_brand"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20150111144209) do
     t.integer  "price_per_day"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "rent_status"
   end
 
   create_table "clients", force: true do |t|
