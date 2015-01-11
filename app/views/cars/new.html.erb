@@ -1,1 +1,10 @@
 <h1>Dodawanie nowego samochodu</h1>
+
+<%= simple_form_for @car do |f| %>
+  <%= f.input :car_brand, placeholder: 'Marka samochodu' %>
+  <%= f.input :car_model, placeholder: 'Model samochodu' %>
+  <%= f.input :fuel_type, placeholder: 'Rodzaj paliwa' %>
+  <%= f.input :num_of_seats, placeholder: 'Liczba miejsc' %>
+  <%= f.input :price_per_day, placeholder: 'Cena za dzień' %>
+  <%= f.button :submit, 'Zapisz' %>
+<% end %>
