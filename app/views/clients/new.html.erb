@@ -1,9 +1,16 @@
-<h4>Dodaj nowego klienta</h4>
-<br>
-<%= simple_form_for @client do |form| %>
-	<%= form.input :first_name %>
-	<%= form.input :last_name %>
-	<%= form.input :email %>
-	<%= form.input :telephone %>
-	<%= form.submit %>
-<% end %>
+<div class="row">
+	<h1>Dodaj nowego klienta</h1>
+</div>
+<div class="row">
+	<div class="col-md-6">
+		<section class="form">
+			<%= simple_form_for @client do |f| %>
+				<%= f.input :first_name, placeholder: 'Imię', label: false %>
+				<%= f.input :last_name, placeholder: 'Nazwisko', label: false %>
+				<%= f.input :email, placeholder: 'E-mail', label: false %>
+				<%= f.input :telephone, placeholder: 'Nr telefonu, np 901901901', label: false %>
+				<%= f.button :submit, 'Dodaj' %>
+			<% end %>
+		</section>
+	</div>
+</div>
