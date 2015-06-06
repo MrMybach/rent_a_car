@@ -1,0 +1,23 @@
+<div class="row">
+	<h1>Lista wszystkich wypożyczeń</h1>
+</div>
+<div class="row">
+	<%# link_to "Dodaj samochód", new_car_path %>
+</div>
+<div class="row">
+	<table class="table table-striped">
+		<tr>
+			<th>Marka</th>
+			<th>Model</th>
+			<th>Rodzaj paliwa</th>
+			<th>Liczba miejsc</th>
+			<th>Cena za dzień</th>
+			<th>Akcje</th>
+		</tr>
+		<% @rents.each do |rent| %>
+			<tr>
+			<%= rent.car_id %>	
+			</tr>
+		<% end %>
+	</table>
+</div>
